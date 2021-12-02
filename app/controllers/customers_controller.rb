@@ -24,9 +24,13 @@ class CustomersController < ApplicationController
   # POST /customers or /customers.json
   def create
     @customer = Customer.new(customer_params)
-    @customer.save
-    flash.notice = "The customer record was created successfully."
-    redirect_to @customer
+    if @customer.save
+      flash.notice = "The customer record was created successfully."
+      redirect_to @customer
+    else
+      flash.now.alert = @customer.errors.full_messages.to_sentence
+      render :new
+    end
     # @customer = Customer.new(customer_params)
 
     # respond_to do |format|
@@ -42,9 +46,13 @@ class CustomersController < ApplicationController
 
   # PATCH/PUT /customers/1 or /customers/1.json
   def update
-    @customer.update(customer_params)
-    flash.notice = "The customer record was updated successfully."
-    redirect_to @customer
+    if @customer.update(customer_params)
+      flash.notice = "The customer record was updated successfully."
+      redirect_to @customer
+    else
+      flash.now.alert = @customer.errors.full_messages.to_sentence
+      render :edit
+    end
     # respond_to do |format|
     #   if @customer.update(customer_params)
     #     format.html { redirect_to @customer, notice: "Customer was successfully updated." }
