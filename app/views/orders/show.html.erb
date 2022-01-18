@@ -11,8 +11,9 @@
 </p>
 
 <p>
-  <strong>Product ID:</strong>
-  <%= @order.customer_id %>
+  <strong>Customer:</strong>
+  <% customer = Customer.find(@order.customer_id)%>
+  <%= customer.full_name %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
