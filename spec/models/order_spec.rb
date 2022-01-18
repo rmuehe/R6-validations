@@ -22,4 +22,12 @@ RSpec.describe Order, type: :model do
     subject.customer_id += 1
     expect(subject).to_not be_valid
   end
+  it "is not valid if product_count is not positive" do
+    subject.product_count = -1
+    expect(subject).to_not be_valid
+  end
+  it "is not valid if product_count is not an integer" do
+    subject.product_count = 1.5
+    expect(subject).to_not be_valid
+  end
 end

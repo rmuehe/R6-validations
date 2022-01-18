@@ -3,4 +3,5 @@ class Order < ApplicationRecord
   validates_associated :customer
   validates :product_name, presence: true
   validates :product_count, presence: true
+  validates :product_count, numericality: {only_integer: true, greater_than: 0}
 end
