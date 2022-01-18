@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
     
     # POST /orders or /orders.json
     def create
-        @order = Orders.new(order_params)
+        @order = Order.new(order_params)
         if @order.save
         flash.notice = "The order record was created successfully."
         redirect_to @order

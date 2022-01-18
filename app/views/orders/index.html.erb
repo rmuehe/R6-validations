@@ -5,8 +5,6 @@
 <table>
   <thead>
     <tr>
-      <%# <th>First name</th>
-      <th>Last name</th> %>
       <th>Product Name</th>
       <th>Product Count</th>
       <th>Customer ID</th>
@@ -17,8 +15,6 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-      <!--  <td><%= customer.first_name %></td> -->
-      <!--  <td><%= customer.last_name %></td> -->
         <td><%= order.product_name %></td>
         <td><%= order.product_count %></td>
         <td><%= order.customer_id %></td>
