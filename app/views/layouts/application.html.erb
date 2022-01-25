@@ -12,6 +12,9 @@
   </head>
 
   <body style="background-color: gray; color: pink">
+    <% if !flash[:alert].nil? %>
+        <p class="my_alert"><%= flash[:alert] %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
