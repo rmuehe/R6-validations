@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require_tree .
+ *= require_self
+ */
+
+.jumbotron {
+    background-image: url('garbage.png');
+    background-size: cover; 
+}
+
+.btn, .jumbotron {
+    opacity: 0.8;
+} 
+
+body {
+  // font-family: 'serat';
+    background-color: black;
+    background-image: url('dark_stairs.jpg');
+    /* background-image: url('pexels-henry-&-co-1171480.jpg'); */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /* opacity: 0.5;   */
+}
+
+@font-face {
+    // font-family: 'SeratUltra-1GE24';
+    font-family: 'serat';
+    // font-family: 'BroadwayRegular-7Bpow';
+    // src: url('BroadwayRegular-7Bpow.ttf') format("ttf");
+    src: url('serat.ttf');
+ }
+
+h1 {
+  //  font-family: 'BroadwayRegular-7Bpow';
+  font-family: 'serat';
+}
+
+ /* https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg */
