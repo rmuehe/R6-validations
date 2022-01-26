@@ -3,17 +3,17 @@
 <div class="card shadow p-3 mb-5 bg-white rounded">
 
   <p>
-    <strong>Product name:</strong>
+    <i class="fas fa-box-open"></i><strong> Product name:</strong>
     <%= @order.product_name %>
   </p>
 
   <p>
-    <strong>Product count:</strong>
+    <i class="fas fa-barcode"></i><strong> Product count:</strong>
     <%= @order.product_count %>
   </p>
 
   <p>
-    <strong>Customer:</strong>
+    <i class="fas fa-user"></i><strong> Customer:</strong>
     <% customer = Customer.find(@order.customer_id)%>
     <%= customer.full_name %>
   </p>
